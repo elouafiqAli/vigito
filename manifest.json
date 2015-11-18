@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "AvitoApp",
+  "description": "This extension will bring the buyer and teh seller closer",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab",
+   "tabs",
+   "http://www.avito.ma/*"
+   ],
+   "content_scripts": [
+    {
+      "matches": ["http://www.avito.ma/*"],
+      "css": ["style.css", "font-awesome.min.css"],
+      "js": ["jquery.min.js", "script.js"]
+    }
+  ]
+}
